@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
  * @param {*} connectionString
  */
 const connection = async (
-  connectionString = 'mongodb://localhost/git-webhooks'
+  connectionString = 'mongodb://localhost/git_webhooks'
 ) => {
   return new Promise(async (resolve, reject) => {
     mongoose.connect(connectionString, {

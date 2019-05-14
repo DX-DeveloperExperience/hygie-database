@@ -8,6 +8,20 @@ Mongodb API to interact with Git-Webhooks project.
 
 `npm i @dxdeveloperexperience/git-webhooks-database`
 
+### Create database
+
+In mongo shell:
+
+```
+use git_webhooks
+db.remote_envs.insert({})
+db.remote_rules.insert({})
+db.remote_envs.remove({})
+db.remote_rules.remove({})
+```
+
+This script will create the 2 collections you need in the `git_webhooks` database.
+
 ### Usage
 
 ```typescript
