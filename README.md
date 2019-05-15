@@ -35,7 +35,7 @@ const main = async () => {
   await localdb
     .connection()
     .then(res => console.log(res))
-    .catch(err => logger.error(err));
+    .catch(err => console.error(err));
 
   await remoteEnvs
     .insertMany([
