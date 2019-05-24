@@ -16,11 +16,13 @@ In mongo shell:
 use git_webhooks
 db.remote_envs.insert({})
 db.remote_rules.insert({})
+db.remote_crons.insert({})
 db.remote_envs.remove({})
 db.remote_rules.remove({})
+db.remote_crons.remove({})
 ```
 
-This script will create the 2 collections you need in the `git_webhooks` database.
+This script will create the 3 collections you need in the `git_webhooks` database.
 
 ### Usage
 
@@ -30,6 +32,7 @@ const localdb = API.localdb;
 
 const remoteRules = API.models.remoteRules;
 const remoteEnvs = API.models.remoteEnvs;
+const remoteCrons = API.models.remoteCrons;
 
 const main = async () => {
   await localdb
