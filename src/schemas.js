@@ -13,7 +13,18 @@ const remoteRulesSchema = new mongoose.Schema({
   content: String,
 });
 
+const remoteCronsSchema = new mongoose.Schema({
+  path: String,
+  content: {
+    filename: String,
+    projectURL: String,
+    gitlabProjectId: Number,
+    expression: String,
+  },
+});
+
 module.exports = {
   remoteEnvsSchema,
   remoteRulesSchema,
+  remoteCronsSchema,
 };
