@@ -1,6 +1,6 @@
 {
-  "name": "@dxdeveloperexperience/git-webhooks-database",
-  "version": "0.1.3",
+  "name": "@dxdeveloperexperience/hygie-database",
+  "version": "0.1.4",
   "description": "",
   "main": "index.js",
   "scripts": {

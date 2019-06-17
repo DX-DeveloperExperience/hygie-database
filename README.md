@@ -1,19 +1,19 @@
-# Git-Webhooks-Database
+# Hygie-Database
 
-Mongodb API to interact with Git-Webhooks project.
+Mongodb API to interact with Hygie project.
 
 ## Getting Started
 
 ### Download
 
-`npm i @dxdeveloperexperience/git-webhooks-database`
+`npm i @dxdeveloperexperience/hygie-database`
 
 ### Create database
 
 In mongo shell:
 
 ```
-use git_webhooks
+use hygie
 db.remote_envs.insert({})
 db.remote_rules.insert({})
 db.remote_crons.insert({})
@@ -22,12 +22,12 @@ db.remote_rules.remove({})
 db.remote_crons.remove({})
 ```
 
-This script will create the 3 collections you need in the `git_webhooks` database.
+This script will create the 3 collections you need in the `hygie` database.
 
 ### Usage
 
 ```typescript
-const API = require('@dxdeveloperexperience/git-webhooks-database');
+const API = require('@dxdeveloperexperience/hygie-database');
 const localdb = API.localdb;
 
 const remoteRules = API.models.remoteRules;

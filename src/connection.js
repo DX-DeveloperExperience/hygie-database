@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
  * Connection to the mongo database
  * @param {*} connectionString
  */
-const connection = async (
-  connectionString = 'mongodb://localhost/git_webhooks'
-) => {
+const connection = async (connectionString = 'mongodb://localhost/hygie') => {
   return new Promise(async (resolve, reject) => {
     mongoose.connect(connectionString, {
       useNewUrlParser: true,
