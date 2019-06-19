@@ -20,6 +20,7 @@ const remoteCronsSchema = new mongoose.Schema({
     projectURL: String,
     gitlabProjectId: Number,
     expression: String,
+    updatedAt: Date,
   },
 });
 
