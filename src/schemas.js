@@ -5,6 +5,8 @@ const remoteEnvsSchema = new mongoose.Schema({
   content: {
     gitApi: String,
     gitToken: String,
+    git: String,
+    gitlabId: String,
   },
 });
 
