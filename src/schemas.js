@@ -1,9 +1,5 @@
 const mongoose = require('mongoose');
 
-interface KeyValueEnvFileInterface {
-  [key: string]: string | boolean | number;
-}
-
 const remoteEnvsSchema = new mongoose.Schema({
   path: String,
   content: {
