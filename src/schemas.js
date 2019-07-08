@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 
+interface KeyValueEnvFileInterface {
+  [key: string]: string | boolean | number;
+}
+
 const remoteEnvsSchema = new mongoose.Schema({
   path: String,
   content: {
@@ -7,6 +11,14 @@ const remoteEnvsSchema = new mongoose.Schema({
     gitToken: String,
     git: String,
     gitlabId: String,
+  },
+});
+
+const remoteEnvsVarSchema = new mongoose.Schema({
+  path: String,
+  content: {
+    type: Map,
+    of: String | Boolean | Number,
   },
 });
 
@@ -30,4 +42,5 @@ module.exports = {
   remoteEnvsSchema,
   remoteRulesSchema,
   remoteCronsSchema,
+  remoteEnvsVarSchema,
 };
