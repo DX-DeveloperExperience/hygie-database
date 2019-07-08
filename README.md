@@ -21,7 +21,7 @@ db.remote_envs_var.insert({})
 db.remote_envs.remove({})
 db.remote_rules.remove({})
 db.remote_crons.remove({})
-db.remote_envs_var.remove({})
+db.remote_envs_vars.remove({})
 ```
 
 This script will create the 4 collections you need in the `hygie` database.
@@ -34,7 +34,7 @@ const localdb = API.localdb;
 
 const remoteRules = API.models.remoteRules;
 const remoteEnvs = API.models.remoteEnvs;
-const remoteEnvsVar = API.models.remoteEnvsVar;
+const remoteEnvsVars = API.models.remoteEnvsVars;
 const remoteCrons = API.models.remoteCrons;
 
 const main = async () => {

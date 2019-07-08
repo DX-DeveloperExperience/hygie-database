@@ -10,12 +10,9 @@ const remoteEnvsSchema = new mongoose.Schema({
   },
 });
 
-const remoteEnvsVarSchema = new mongoose.Schema({
+const remoteEnvsVarsSchema = new mongoose.Schema({
   path: String,
-  content: {
-    type: Map,
-    of: String | Boolean | Number,
-  },
+  content: Object,
 });
 
 const remoteRulesSchema = new mongoose.Schema({
@@ -38,5 +35,5 @@ module.exports = {
   remoteEnvsSchema,
   remoteRulesSchema,
   remoteCronsSchema,
-  remoteEnvsVarSchema,
+  remoteEnvsVarSchema: remoteEnvsVarsSchema,
 };
